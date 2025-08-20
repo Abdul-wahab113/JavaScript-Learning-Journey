@@ -83,7 +83,7 @@ x = "The answer is " + 42; // "The answer is 42"
 y = 42 + " is the answer"; // "42 is the answer"
 z = "37" + 7; // "377"
 
-console.table([typeof(x), typeof(y), typeof(z)]);
+console.table([typeof (x), typeof (y), typeof (z)]);
 
 
 // operator other than '+'  between a string and other datatype like int the resulting value will be always datatype of 'number' 
@@ -92,7 +92,7 @@ l = "37" - 7; // 30
 m = "37" * 7; // 259
 
 
-console.table([typeof(l), typeof(m)]);
+console.table([typeof (l), typeof (m)]);
 
 
 let num = 42;            // Number
@@ -104,11 +104,51 @@ let nul = null;          // Null
 let sym = Symbol("id");  // Symbol
 let obj = { key: "val" }; // Object
 let arr = [1, 2, 3];     // Array (Object subtype)
-let func = () => {};     // Function (Object subtype)
+let func = () => { };     // Function (Object subtype)
 
 console.log(typeof num);  // "number"
 console.log(parseInt("101", 2)); // 5 (String to Number, base-2)
 console.log(parseInt("101", 1)); // NaN (invalid radix)
 
 
-console.table([typeof(num),typeof(big),typeof(str),typeof(bool),typeof(undef),typeof(nul),typeof(sym),typeof(obj),typeof(arr),typeof(func)])
+console.table([typeof (num), typeof (big), typeof (str), typeof (bool), typeof (undef), typeof (nul), typeof (sym), typeof (obj), typeof (arr), typeof (func)])
+
+
+
+//      --------------------------------------------------------------------------------------------------------
+
+//                                                         Stack and Heap Memory
+
+//  Primitive Datatypes -->  Stack Memory  -->  by value --> the distinct copy of variable is created and the changes in the second copy
+//  will not affect the first copy each copy of the variable is independent of each other
+
+let course = "Data Structures";
+
+let subject = course;
+
+subject = "OOP";
+
+console.log(course);
+console.log(subject);
+
+
+
+
+//  Non-Primitive Datatypes -->  Heap Memory  -->  by refernce  -->  no distinct copy of the existing variable is created instead the
+//  reference or the memory address of the existing variable is passed to new variable
+//  and any changes made into any of the varable in heap the result will shown in both.
+
+
+let userOne = {
+    name : "Abdul Wahab",
+    age : 20,
+    email : "abdulwahab911@gmail.com"
+}
+
+
+let userTwo = userOne;
+
+userTwo.name = "Abdul Rehman";
+
+console.log(userOne);
+console.log(userTwo);
