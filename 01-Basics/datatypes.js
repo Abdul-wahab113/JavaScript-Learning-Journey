@@ -4,7 +4,7 @@
 
 
 /*
-                             Primitive Data Types
+                             Primitive Data Types (Call by value)
 
 
 Primitive types are immutable (cannot be changed) and represent single values. There are seven primitive types in JavaScript:
@@ -47,8 +47,14 @@ Represents unique, immutable identifiers, often used as object property keys.
 Created with Symbol(); each Symbol is unique, even with the same description.
 Example: let sym = Symbol("id");
 
+let id = Symbol("123");
+let anotherId = Symbol("123");
 
-                             Non-Primitive (Reference) Data Type
+console.log(id===anotherId); //this will return false beacuse of the symbol datatype the data is same in both variables 
+
+
+
+                             Non-Primitive (Reference) Data Type (Call by reference)
 Non-primitive types are mutable and typically hold complex data. There’s one main category:
 
 1- Object:
@@ -56,10 +62,12 @@ Represents a collection of key-value pairs (properties).
 Includes subtypes like:
 
 o- Plain Objects: let obj = { name: "Alice", age: 30 };
+Key concept: values encapsulated with a pair of curly braces ({}) are termed as object.
 
 o- Arrays: Ordered lists, e.g., let arr = [1, 2, 3];
 
 o- Functions: Special objects that can be invoked, e.g., let func = function() { return "Hi"; };
+datatype of function is known as object function and it depends on the datatype of the returning value of the function.
 
 o- Special Objects: Like Date, RegExp, Map, Set, etc.
 
