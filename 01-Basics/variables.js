@@ -80,7 +80,7 @@ const ocupation = "Software Engineer"
 let accountType;
 // console.log(accountType); // undefined
 
-console.table([name ,age , ocupation, accountType]);
+console.table([name, age, ocupation, accountType]);
 
 
 let isActive = true;

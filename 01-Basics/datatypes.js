@@ -140,9 +140,9 @@ console.log(subject);
 
 
 let userOne = {
-    name : "Abdul Wahab",
-    age : 20,
-    email : "abdulwahab911@gmail.com"
+    name: "Abdul Wahab",
+    age: 20,
+    email: "abdulwahab911@gmail.com"
 }
 
 
