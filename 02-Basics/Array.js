@@ -10,9 +10,9 @@ let nameArray = ["Abdul Wahab", "Bilal", "Talha"];
 
 
 //this .push() method will add element in the given array at most last position or index.
-nameArray.push("Abiha");
-nameArray.push("Ruquia");
-nameArray.push("Riaz");
+nameArray.push("Ali");
+nameArray.push("Hassan");
+nameArray.push("Umair");
 
 
 // console.log(nameArray[0]);
