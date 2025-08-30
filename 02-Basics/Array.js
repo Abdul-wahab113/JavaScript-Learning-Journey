@@ -133,12 +133,14 @@ console.log(c); // [1,2,3,4]
 
 
 //                   Slice (non-destructive, makes copy)
-
+// Slice makes a new array and make changes in the new array not in the original array. 
+// and it will not includes the last index provided example given Below:
 let array = [10, 20, 30, 40];
 console.log(array.slice(1, 3)); // [20,30]
 
 //                   Splice (changes original array)
-
+// splice makes changes in the original array. 
+// and includes the last index of the array in the result.
 array.splice(1, 2, "Hi", "Bye");
 console.log(array); // [10, "Hi", "Bye", 40]
 
